@@ -4,6 +4,7 @@
 add_action('wp_enqueue_scripts',function(){
   // Enqueue Styles
   wp_enqueue_style('mulish-google-fonts', 'https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700;800&display=swap', array('sp-core-style'), time() );
+  wp_enqueue_style('archivo-google-fonts', 'https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&display=swap', array('sp-core-style'), time() );
   wp_enqueue_style('gls-css', get_stylesheet_directory_uri().'/assets/css/main.css', array('sp-core-style'), time() );
 
 }, 99);
@@ -22,10 +23,15 @@ foreach( $inc_files as $inc_file ){
 add_filter( 'sp_list_google_fonts', function( $fonts ){
 
   $fonts[] = array(
-      'slug'	=> 'mulish',
-      'name'	=> 'Mulish',
-      'url'	  => 'Mulish'
-    );
+    'slug'	=> 'mulish',
+    'name'	=> 'Mulish',
+    'url'	  => 'Mulish'
+  );
+  $fonts[] = array(
+    'slug'	=> 'archivo',
+    'name'	=> 'Archivo',
+    'url'	  => 'Archivo'
+  );
   return $fonts;
 });
 
