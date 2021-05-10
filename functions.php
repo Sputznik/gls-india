@@ -3,6 +3,7 @@
 /* ASSETS */
 add_action('wp_enqueue_scripts',function(){
   // Enqueue Styles
+  wp_enqueue_style('mulish-google-fonts', 'https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700;800&display=swap', array('sp-core-style'), time() );
   wp_enqueue_style('gls-css', get_stylesheet_directory_uri().'/assets/css/main.css', array('sp-core-style'), time() );
 
 }, 99);
@@ -15,6 +16,18 @@ $inc_files = array(
 foreach( $inc_files as $inc_file ){
   require_once( $inc_file );
 }
+
+
+//Add google fonts
+add_filter( 'sp_list_google_fonts', function( $fonts ){
+
+  $fonts[] = array(
+      'slug'	=> 'mulish',
+      'name'	=> 'Mulish',
+      'url'	  => 'Mulish'
+    );
+  return $fonts;
+});
 
 
 /**
