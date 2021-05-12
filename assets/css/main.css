@@ -18,11 +18,16 @@
 }
 
 /* Sticky menu */
-.sticky-transparent-header{
-  position: absolute;
+.sticky-transparent-header {
+	background-color: #ffffff;
+  transition: 500ms ease;
+}
+.sticky-transparent-header.affix {
+  top: 0;
   width: 100%;
   z-index: 999;
-  background-color: #ffffff;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 8%);
+  border-bottom: 1px solid #e6e6e6;
 }
 /* Sticky menu */
 
@@ -32,9 +37,6 @@
   border-radius: 0;
   margin-bottom: 0;
   position: relative;
-  background-color: #ffffff;
-}
-.sticky-transparent-header.affix{
   background-color: #ffffff;
 }
 
