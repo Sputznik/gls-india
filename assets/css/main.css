@@ -1,16 +1,14 @@
 /* NAVBAR */
 
-.navbar { min-height: 99px; margin-bottom: 0;}
+.navbar { min-height: 92px; margin-bottom: 0;}
 
 .navbar-brand {
-  padding: 0 15px;
-  height: 80px;
-  line-height: 80px;
+	padding: 0 30px;
+  margin-top: 25px;
 }
 
 .navbar-toggle {
-  /* (99px - button height 34px) / 2 = 32.5px */
-  margin-top: 32.5px;
+  margin-top: 18px;
   margin-right: 0;
   padding: 9px 4px !important;
 }
@@ -135,18 +133,21 @@
 /* Social Icons */
 .header5 .btn-edition{
   padding: 23.5px 0;
+
+  padding: 16px 0;
 }
 .header5 .btn-edition > a {
   display: inline-block;
   color: #ffffff;
   line-height: 28px;
+  font-weight:900;
   text-align: center;
-  padding: 8px 24px;
-  background: #1485ca;
-  border: 2px solid #1485ca;
-  border-radius: 24px;
+  padding: 16px 32px;
+  border-radius: 32px;
+  border: 0;
   outline: none;
   text-decoration: none;
+  background: linear-gradient(140deg, rgba(27,50,121,1) 0%, rgba(31,133,195,1) 100%);
 }
 
 .header5 .btn-edition > a:not(:first-child){
@@ -159,6 +160,20 @@
 
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 769px) and (max-width:1024px){
+  .navbar-brand > img {
+    height: 25px;
+    margin-top: 5px;
+  }
+  .header5 .navbar-nav {
+    text-align: left !important;
+  }
+  .header5 .nav > li:not(:last-child) {
+    margin-right: 20px !important;
+    font-size: 16px;
+  }
+}
+
 @media( min-width: 769px ){
 
   /* Ovverride default BS3 styles */
@@ -180,7 +195,7 @@
   .navbar-default .navbar-nav > li:not(:last-child){ margin-right: 25px; }
   .navbar-default .navbar-nav > li > a{
     position: relative;
-    padding: 36px 0;
+    padding: 32px 0;
   }
 
   .navbar-default .navbar-nav > li > a::before{
@@ -213,16 +228,14 @@
 
   /* BS3 Nav Links */
   .navbar-nav > li > a {
-    /* (99px - line-height of 27px) / 2 = 36px */
-    padding-top: 36px;
-    padding-bottom: 36px;
     line-height: 27px;
   }
 
 }
 
 @media only screen and (max-width: 768px) and (min-width: 768px){
-
+  .header5 .logo.logo-normal{ margin-left: 15px; }
+  .header5 .navbar-brand{ margin-top: 17px !important; }
   .header5 .navbar-nav{ margin: 0 !important; }
   #bs-example-navbar-collapse-1,
   .navbar.header5 > .container-fluid{
@@ -239,8 +252,18 @@
     background-color: #ffffff;
   }
 
+  .header5.navbar-default{
+    min-height: 70px
+  }
+
   .header5 .navbar-brand{
   	padding: 0 9px;
+    height: 40px;
+    margin-top: 22px;
+  }
+
+  .navbar-brand .visible-xs{
+    max-width: 230px;
   }
 
   .header5 .navbar-nav{
@@ -251,6 +274,7 @@
   .header5 .navbar .dropdown-menu > li > a{
     font-weight: bold !important;
     color: #1c1d1e;
+    text-align: center;
   }
 
   .header5 .btn-wrapper{
@@ -258,7 +282,6 @@
   }
   .header5 .btn-edition{
     text-align: center;
-    background-color: #2e3d59;
   }
 
   .header5 .btn-edition > a{

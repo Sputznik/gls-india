@@ -41,8 +41,13 @@ add_filter( 'sp_list_google_fonts', function( $fonts ){
 */
 add_filter('wp_nav_menu_items', function( $items, $args ){
 
+  $gls_images = get_stylesheet_directory_uri();
+
+  $navbar_right  = '<div class="btn-edition">';
+  $navbar_right .= '<a target="_blank" href="#" style="background-image: url('.$gls_images.'/assets/images/logo-gradient.png);">Team Edition</a></div>';
+
   if( $args->theme_location == 'primary' ){
-    $items .= '<li class="menu-item btn-wrapper"><div class="btn-edition"><a target="_blank" href="#">Team Edition</a></div></li>';
+    $items .= '<li class="menu-item btn-wrapper">'.$navbar_right.'</li>';
   }
   return $items;
 }, 10, 2);
