@@ -7,6 +7,9 @@ add_action('wp_enqueue_scripts',function(){
   wp_enqueue_style('archivo-google-fonts', 'https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&display=swap', array('sp-core-style'), time() );
   wp_enqueue_style('gls-css', get_stylesheet_directory_uri().'/assets/css/main.css', array('sp-core-style'), time() );
 
+  // Enqueue Scripts
+  wp_enqueue_script('gls-js', get_stylesheet_directory_uri().'/assets/js/main.js', array('jquery'), time() );
+
 }, 99);
 
 //Include Files
@@ -35,6 +38,11 @@ add_filter( 'sp_list_google_fonts', function( $fonts ){
   return $fonts;
 });
 
+/* ADD SOW FROM THE THEME */
+add_action('siteorigin_widgets_widget_folders', function( $folders ){
+  $folders[] = get_stylesheet_directory() . '/so-widgets/';
+  return $folders;
+});
 
 /**
 * Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
