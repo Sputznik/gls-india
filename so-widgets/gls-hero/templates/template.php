@@ -1,6 +1,6 @@
 <!-- GLS HERO -->
 <?php
-  $image_url = wp_get_attachment_url( $instance['image'] );
+  $animation_speed = !empty( $instance['animation_speed'] ) ? $instance['animation_speed'] : '2000';
 ?>
 <div class="gls-hero">
   <div class="hero-content">
@@ -14,9 +14,25 @@
     </div>
   </div>
   <div class="hero-img">
-    <?php if( !empty( $image_url ) ):?>
-      <img src="<?php _e( $image_url );?>" alt="Hero Image" />
-    <?php endif;?>
+    <!-- Carousel -->
+    <div id="gls-bs-slider" class="carousel slide" data-ride="carousel" data-interval="<?php _e( $animation_speed );?>">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+      <?php $i=0; foreach( $instance['image_slides'] as $item ):?>
+        <?php
+          $class=" ";if( $i == 0 ){ $class= "active"; }
+          $image = wp_get_attachment_url( $item['image'] );
+        ?>
+        <div class="item <?php _e( $class );?>">
+          <div class="item-body">
+            <?php if( $image ):?>
+             <img src="<?php _e( $image );?>" alt="carousel-image">
+           <?php endif;?>
+          </div>
+        </div>
+      <?php $i++; endforeach;?>
+      </div> <!-- Wrapper ends.. -->
+    </div> <!-- Carousel ends.. -->
   </div>
 </div>
 <!-- GLS HERO  ends -->

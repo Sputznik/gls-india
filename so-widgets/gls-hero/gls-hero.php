@@ -27,13 +27,20 @@ class GLS_HERO extends SiteOrigin_Widget {
 			array(),
 			//The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
 			array(
-				'image' => array(
-					'type' 		=> 'media',
-					'label' 	=> __( 'Choose Image', 'siteorigin-widgets' ),
-					'choose' 	=> __( 'Choose image', 'siteorigin-widgets' ),
-					'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
-					'library' 	=> 'image',
-					'fallback' 	=> false
+				'image_slides' => array(
+					'type' 	=> 'repeater',
+					'label' => __( 'Image Slider Section' , 'siteorigin-widgets' ),
+					'item_name'  => __( 'Repeater item', 'siteorigin-widgets' ),
+					'fields' => array(
+						'image' => array(
+							'type' 		=> 'media',
+							'label' 	=> __( 'Choose Image', 'siteorigin-widgets' ),
+							'choose' 	=> __( 'Choose image', 'siteorigin-widgets' ),
+							'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
+							'library' 	=> 'image',
+							'fallback' 	=> false
+						)
+					)
 				),
         'hero_content' => array(
           'type' => 'tinymce',
@@ -42,7 +49,6 @@ class GLS_HERO extends SiteOrigin_Widget {
           'rows' => 20,
           'default_editor' => 'tinymce'
         ),
-
 				'hero_more_section' => array(
           'type' => 'tinymce',
           'label' => __( 'Read More Content', 'siteorigin-widgets' ),
@@ -50,10 +56,15 @@ class GLS_HERO extends SiteOrigin_Widget {
           'rows' => 20,
           'default_editor' => 'tinymce'
         ),
-
 				'btn_contact_url' => array(
 					'type' 		=> 'link',
 					'label' => __( 'Contact Button URL', 'siteorigin-widgets'),
+				),
+				'animation_speed' => array(
+					'type' 			=> 'text',
+					'label' 		=> __( 'Slider Animation Speed', 'siteorigin-widgets' ),
+					'default' 	=> '2000',
+					'description'	=>	'Animation speed in milliseconds. Default 2000'
 				),
 
 			),
