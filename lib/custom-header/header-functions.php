@@ -41,3 +41,15 @@ add_filter('sp_nav_menu_options', function( $sp_nav_menu_options ){
 
   return $sp_nav_menu_options;
 });
+
+// CUSTOMIZER OPTIONS
+add_action('customize_register', function( $wp_customize ){
+  global $sp_customize;
+
+  $sp_customize->section( $wp_customize, 'sp_theme_panel', 'sp_gls_section', 'GLS Settings', '');
+
+  /** HEADER BUTTON */
+  $sp_customize->text( $wp_customize, 'sp_gls_section', '[gls][header-btn-txt]', 'Header Button Text', '');
+  $sp_customize->text( $wp_customize, 'sp_gls_section', '[gls][header-btn-url]', 'Header Button URL', '');
+
+});

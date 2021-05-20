@@ -49,13 +49,25 @@ add_action('siteorigin_widgets_widget_folders', function( $folders ){
 */
 add_filter('wp_nav_menu_items', function( $items, $args ){
 
+  global $sp_customize;
+
+	$option = $sp_customize->get_option();
+
   $gls_images = get_stylesheet_directory_uri();
 
-  $navbar_right  = '<div class="btn-edition">';
-  $navbar_right .= '<a target="_blank" href="#" style="background-image: url('.$gls_images.'/assets/images/logo-gradient.png);">Team Edition</a></div>';
+  if( isset( $option['gls'] ) && $option['gls'] ){
 
-  if( $args->theme_location == 'primary' ){
-    $items .= '<li class="menu-item btn-wrapper">'.$navbar_right.'</li>';
+    $btn_txt = ( isset( $option['gls']['header-btn-txt'] ) && $option['gls']['header-btn-txt'] ) ? $option['gls']['header-btn-txt'] : "Button";
+    $btn_url = ( isset( $option['gls']['header-btn-url'] ) && $option['gls']['header-btn-url'] ) ? $option['gls']['header-btn-url'] : "#";
+
+    $navbar_right  = '<div class="btn-edition">';
+    $navbar_right .= '<a target="_blank" href="'.$btn_url.'" style="background-image: url('.$gls_images.'/assets/images/logo-gradient.png);">'.$btn_txt.'</a></div>';
+
+    if( $args->theme_location == 'primary' ){
+      $items .= '<li class="menu-item btn-wrapper">'.$navbar_right.'</li>';
+    }
+
   }
+
   return $items;
 }, 10, 2);
