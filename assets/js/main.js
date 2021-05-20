@@ -1,5 +1,7 @@
 jQuery(document).ready(function(){
 
+  var glsHeaderHeight = jQuery('#gls-sticky-header-wrapper > .sticky-transparent-header').innerHeight();
+
   // GLS SOW HERO READ MORE OR LESS
   jQuery('.gls-hero .toggle-content').click(function(e) {
    e.preventDefault();
@@ -13,17 +15,28 @@ jQuery(document).ready(function(){
   });
 
   function glsStickyHeader(){
+    // gls-sticky-header-wrapper
+    if( jQuery(window).scrollTop() > 0 ){
 
-    if( jQuery(window).width() > 768 ) {
+      jQuery('#gls-sticky-header-wrapper > .sticky-transparent-header').addClass('affix');
 
-      jQuery('body').css('margin-top','93px');
+      if( jQuery(window).width() > 768 ) {
+
+        jQuery('body').css('margin-top', glsHeaderHeight );
+      }
+      else {
+        jQuery('body').css('margin-top', glsHeaderHeight );
+      }
     }
     else {
-      jQuery('body').css('margin-top','70px');
+      jQuery('#gls-sticky-header-wrapper > .sticky-transparent-header').removeClass('affix');
+      jQuery('body').css('margin-top', '0px' );
     }
 
   }
   // EXECUTED ON PAGE LOAD
-  glsStickyHeader();
+  jQuery(window).scroll(function() {
+    glsStickyHeader();
+  });
 
 });

@@ -1,5 +1,5 @@
-<div id="sticky-header-wrapper" >
-  <div class="sticky-transparent-header" data-spy="affix" >
+<div id="gls-sticky-header-wrapper" >
+  <div class="sticky-transparent-header">
     <nav class="navbar navbar-default header5">
       <div class="container-fluid"><!-- .container-->
         <!-- Brand and toggle get grouped for better mobile display -->
