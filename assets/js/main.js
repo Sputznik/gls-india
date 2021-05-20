@@ -12,4 +12,18 @@ jQuery(document).ready(function(){
    }
   });
 
+  function glsStickyHeader(){
+
+    if( jQuery(window).width() > 768 ) {
+
+      jQuery('body').css('margin-top','93px');
+    }
+    else {
+      jQuery('body').css('margin-top','70px');
+    }
+
+  }
+  // EXECUTED ON PAGE LOAD
+  glsStickyHeader();
+
 });

@@ -1,5 +1,5 @@
-<div id="sticky-header-wrapper">
-  <div class="sticky-transparent-header" data-spy="affix" data-offset-top="0">
+<div id="sticky-header-wrapper" >
+  <div class="sticky-transparent-header" data-spy="affix" >
     <nav class="navbar navbar-default header5">
       <div class="container-fluid"><!-- .container-->
         <!-- Brand and toggle get grouped for better mobile display -->
