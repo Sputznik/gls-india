@@ -253,6 +253,87 @@
 
 .gls-hero .hero-content > .section { display:none; }
 
+/* SOW GLS LOGO SLIDER */
+
+/* SLICK DOTS */
+.gls-logo-slider ul.slick-dots{
+	opacity: 0;
+	transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	list-style: none;
+	text-align: center;
+	display: block;
+	margin-top: 23px;
+	padding: 0;
+}
+.gls-logo-slider.loaded ul.slick-dots{ opacity: 1; }
+.gls-logo-slider ul.slick-dots li{ display: inline-block; line-height: 1; }
+.gls-logo-slider ul.slick-dots li button{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	font-size: 0;
+	padding: 0;
+	margin: 0 4px;
+	cursor: pointer;
+	background: transparent;
+	outline: none;
+	vertical-align: top;
+	border: 2px solid #febd30;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+}
+.gls-logo-slider ul.slick-dots li button:hover,
+.gls-logo-slider ul.slick-dots li.slick-active button{ background: #febd30; border-color: #febd30; }
+
+/* SLICK ARROWS */
+.gls-logo-slider button.slick-prev,
+.gls-logo-slider button.slick-next{
+	position: absolute;
+	height: 46px;
+	display: inline-block;
+	top: 45%;
+	transform: translateY(-45%);
+	margin-top: -18px;
+	cursor: pointer;
+	outline: none;
+	opacity: 0;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	text-align: center;
+	line-height: 46px;
+	background: transparent;
+	z-index: 12;
+	color: #febd30;
+	padding: 0;
+	border: none;
+	text-align: center;
+}
+.gls-logo-slider.loaded button.slick-prev,
+.gls-logo-slider.loaded button.slick-next { opacity: 1; }
+.gls-logo-slider > button.slick-prev{
+	left: -20px;
+}
+.gls-logo-slider > button.slick-next{
+	right: -20px;
+}
+
+.gls-logo-slider.loaded button i{
+	font-size: 46px;
+	line-height: 46px;
+	height: 100%;
+}
+
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 769px) and (max-width:1024px){
   .navbar-brand > img {
