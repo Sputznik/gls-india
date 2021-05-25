@@ -332,6 +332,11 @@
 	height: 100%;
 }
 
+.gls-logo-slider .redirect-url:focus,
+.gls-logo-slider .redirect-url img:focus-visible{
+	outline: none;
+}
+
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 769px) and (max-width:1024px){
