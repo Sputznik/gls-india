@@ -54,15 +54,13 @@ add_filter('wp_nav_menu_items', function( $items, $args ){
 
 	$option = $sp_customize->get_option();
 
-  $gls_images = get_stylesheet_directory_uri();
-
   if( isset( $option['gls'] ) && $option['gls'] ){
 
     $btn_txt = ( isset( $option['gls']['header-btn-txt'] ) && $option['gls']['header-btn-txt'] ) ? $option['gls']['header-btn-txt'] : "Button";
     $btn_url = ( isset( $option['gls']['header-btn-url'] ) && $option['gls']['header-btn-url'] ) ? $option['gls']['header-btn-url'] : "#";
 
     $navbar_right  = '<div class="btn-edition">';
-    $navbar_right .= '<a target="_blank" href="'.$btn_url.'" style="background-image: url('.$gls_images.'/assets/images/logo-gradient.png);">'.$btn_txt.'</a></div>';
+    $navbar_right .= '<a target="_blank" href="'.$btn_url.'">'.$btn_txt.'</a></div>';
 
     if( $args->theme_location == 'primary' ){
       $items .= '<li class="menu-item btn-wrapper">'.$navbar_right.'</li>';

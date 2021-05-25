@@ -135,7 +135,6 @@
 /* Social Icons */
 .header5 .btn-edition{
   padding: 23.5px 0;
-
   padding: 16px 0;
 }
 .header5 .btn-edition > a {
@@ -149,7 +148,7 @@
   border: 0;
   outline: none;
   text-decoration: none;
-  background: linear-gradient(140deg, rgba(27,50,121,1) 0%, rgba(31,133,195,1) 100%);
+  background-color: #337ab7;
 }
 
 .header5 .btn-edition > a:not(:first-child){
