@@ -212,6 +212,20 @@
   object-fit: cover;
 }
 
+#gls-bs-slider .carousel-indicators li{
+	width: 12px;
+	height: 12px;
+	border: 1px solid #febd30;
+	border-radius: 12px;
+	background-color: #febd30;
+	opacity: 0.6;
+}
+#gls-bs-slider .carousel-indicators .active{
+	margin: 1px;
+	background-color: #febd30;
+	opacity: 1;
+}
+
 .gls-hero .hero-btn{
   display: inline-block;
   font-weight: 900;

@@ -1,7 +1,10 @@
 <!-- GLS HERO -->
 <?php
+
   $animation_speed = !empty( $instance['animation_speed'] ) ? $instance['animation_speed'] : '2000';
+
 ?>
+
 <div class="gls-hero">
   <div class="hero-content">
     <?php _e( $instance['hero_content'] );?>
@@ -15,7 +18,16 @@
   </div>
   <div class="hero-img">
     <!-- Carousel -->
-    <div id="gls-bs-slider" class="carousel slide" data-ride="carousel" data-interval="<?php _e( $animation_speed );?>">
+    <div id="gls-bs-slider" class="carousel slide" data-ride="carousel" data-interval="<?php _e( $animation_speed );?>" data-pause="false">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <?php $slide=0; foreach( $instance['image_slides'] as $item ):?>
+          <?php $indicator=" "; if( $slide == 0 ){ $indicator= "active"; } ?>
+          <li data-target="#gls-bs-slider" data-slide-to="<?php _e( $slide );?>" class="<?php _e( $indicator );?>"></li>
+        <?php  $slide++; endforeach;?>
+      </ol>
+
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
       <?php $i=0; foreach( $instance['image_slides'] as $item ):?>
