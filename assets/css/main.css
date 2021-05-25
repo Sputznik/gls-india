@@ -484,4 +484,11 @@
 	.gls-hero .hero-img{ display: none; }
 	.gls-hero .hero-content{ width: 100%; padding: 80px 15px; }
 
+	/* SOW GLS LOGO SLIDER */
+	.gls-logos-wrapper{
+		width: 98%;
+		margin: 0 auto;
+		padding: 36px 30px 36px;
+	}
+
 }

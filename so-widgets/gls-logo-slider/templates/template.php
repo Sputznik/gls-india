@@ -8,7 +8,7 @@
 
 <!-- GLS LOGO SLIDER  -->
 <div class="fullwidth">
-	<div class="" style="max-width:1170px;">
+	<div class="gls-logos-wrapper">
 		<section data-behaviour="gls-logos-slick" data-items="<?php _e( $instance['show_slides'] );?>" class="gls-logo-slider">
 			<?php foreach( $instance['slides'] as $slide ):?>
 				<a href="<?php _e( $slide['redirect_url'] );?>" class="redirect-url" target="_blank">
@@ -20,5 +20,4 @@
 		</section>
 	</div>
 </div>
-
 <!-- End -->

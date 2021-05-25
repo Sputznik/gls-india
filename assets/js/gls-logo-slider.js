@@ -11,15 +11,18 @@ jQuery.fn.glsLogoSlider = function(){
 			autoplaySpeed		: 1500,
 			arrows					: true,
 			dots						: true,
-			rows						: 0,
 			pauseOnHover		: true,
 			nextArrow     	: '<button type="button" class="slick-next slick-nav"><i class="fa fa-angle-right"></i></button>',
 			prevArrow     	: '<button type="button" class="slick-prev slick-nav"><i class="fa fa-angle-left"></i></button>',
 			responsive			: [
 				{
 					breakpoint: 1169,
-					settings: { slidesToShow: 2 }
+					settings: { slidesToShow: 4 }
 				},
+				{
+	        breakpoint: 769,
+					settings: { slidesToShow: 3 }
+      	},
 				{
 	        breakpoint: 520,
 					settings: { slidesToShow: 1 }
