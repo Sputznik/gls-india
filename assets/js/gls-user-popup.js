@@ -9,8 +9,6 @@ jQuery.fn.gls_user_popup = function() {
         bio           = $el.find('.bio').html(),
 				bg_color			= $el.find('.gls-user-body').css('background-color');
 
-				console.log(bg_color);
-
     // CREATES DYNAMIC USER MODAL
 		$el.on( 'click', function() { $el.createModal(); });
 

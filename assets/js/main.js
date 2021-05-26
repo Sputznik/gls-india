@@ -39,4 +39,25 @@ jQuery(document).ready(function(){
     glsStickyHeader();
   });
 
+  // DROPDOWN MENU TOGGLER
+  if( jQuery(window).width() <= 768 ) {
+    jQuery( '.header5 .navbar-nav .dropdown > a' ).append( '<span class="menu-toggler"><i class="fa fa-angle-down"></i></span>' );
+
+    jQuery('.header5 .navbar-nav .menu-toggler').on('click', function(e){
+  		e.preventDefault();
+
+      var $this = jQuery( this );
+
+  		if($this.children().hasClass('fa-angle-down')){
+  			$this.children().removeClass('fa-angle-down').addClass('fa-angle-up');
+  		}
+  		else{
+  			$this.children().removeClass('fa-angle-up').addClass('fa-angle-down');
+  		}
+
+  		$this.parent().next().slideToggle( 'fast' );
+    });
+  }
+
+
 });

@@ -131,8 +131,6 @@
 /* Animate hamburger */
 
 /* Header Right */
-
-/* Social Icons */
 .header5 .btn-edition{
   padding: 23.5px 0;
   padding: 16px 0;
@@ -151,12 +149,17 @@
   background-color: #337ab7;
 }
 
-.header5 .btn-edition > a:not(:first-child){
-  margin-left: 8px;
-}
-
-.header5 .btn-edition > a > i{
-  font-size: 16px;
+/* DROP MENU TOGGLER */
+.header5 .navbar-nav li a .menu-toggler {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  line-height: 1;
+  font-size: 17px;
+  color: #313131;
+	padding: 11px 0 11px 10px;
 }
 
 
@@ -588,6 +591,11 @@ a[data-behaviour~="gls-user-popup"]{ text-decoration: none; display: block; heig
   #gls-user-modal .gls-user-body .user-meta { margin-left: 0px; margin-top: 3%; }
   #gls-user-modal .gls-user-body { margin: 0px 15px 20px; }
   #gls-user-modal .modal-header { margin: 20px 15px 10px; }
+
+	/* DROP MENU TOGGLER */
+	.navbar-nav li.dropdown:hover ul.dropdown-menu,
+	.navbar-nav>li>.dropdown-menu{ display: none; }
+	.header5 .navbar-nav .caret{ display: none; }
 
 }
 
