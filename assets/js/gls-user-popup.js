@@ -6,7 +6,10 @@ jQuery.fn.gls_user_popup = function() {
         $image         = $el.find('.user-thumbnail-bg'),
 				imageUrl			=	$image.attr('style'),
         name          = $el.find('.name').text(),
-        bio           = $el.find('.bio').html();
+        bio           = $el.find('.bio').html(),
+				bg_color			= $el.find('.gls-user-body').css('background-color');
+
+				console.log(bg_color);
 
     // CREATES DYNAMIC USER MODAL
 		$el.on( 'click', function() { $el.createModal(); });
@@ -23,7 +26,7 @@ jQuery.fn.gls_user_popup = function() {
             </div>
             <div class="modal-body">
               <div class="gls-user-body">
-                <div class="user-thumbnail-bg" style="${imageUrl}"></div>
+                <div class="user-thumbnail-bg" style="${imageUrl}background-color:${bg_color};"></div>
                 <div class="user-meta">
                   <h5 class="name">${name}</h5>
                   <div class="separator"></div>
