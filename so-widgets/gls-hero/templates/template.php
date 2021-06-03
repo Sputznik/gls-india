@@ -34,11 +34,14 @@
         <?php
           $class=" ";if( $i == 0 ){ $class= "active"; }
           $image = wp_get_attachment_url( $item['image'] );
+          $redirect_url   = !empty( $item['redirect_url'] ) ? $item['redirect_url'] : "#";
         ?>
         <div class="item <?php _e( $class );?>">
           <div class="item-body">
             <?php if( $image ):?>
-             <img src="<?php _e( $image );?>" alt="carousel-image">
+            <a href="<?php _e( $redirect_url );?>" class="redirect-url" <?php if( $item['new_window'] ){ echo "target=_blank"; } ?> >
+              <img src="<?php _e( $image );?>" alt="carousel-image">
+            </a>
            <?php endif;?>
           </div>
         </div>

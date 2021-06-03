@@ -39,7 +39,16 @@ class GLS_HERO extends SiteOrigin_Widget {
 							'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
 							'library' 	=> 'image',
 							'fallback' 	=> false
-						)
+						),
+						'redirect_url' => array(
+							'type' 	 => 'link',
+							'label'  => __( 'Redirect URL', 'siteorigin-widgets' ),
+						),
+						'new_window' => array(
+		        	'type' 		=> 'checkbox',
+		        	'label' 	=> __( 'Open URL in a new window', 'siteorigin-widgets' ),
+		        	'default' => false
+		    		),
 					)
 				),
         'hero_content' => array(
