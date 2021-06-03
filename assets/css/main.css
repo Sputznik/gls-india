@@ -423,13 +423,9 @@ a[data-behaviour~="gls-user-popup"]{ text-decoration: none; display: block; heig
   font-weight: 900;
   font-size: 18px;
   padding: 1em 2em;
-  background: #febd30;
-  color: #ffffff;
-  border: 1px solid #febd30;
   -webkit-border-radius: 1.5em;
   -moz-border-radius: 1.5em;
   border-radius: 1.5em;
-  text-shadow: 0 1px 0 rgb(0 0 0 / 5%);
   text-decoration: none;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -568,12 +564,6 @@ div.gls-multi-btn{ display: inline-block; cursor: pointer; }
 	  background: #fec344;
 	  border-color: #fec344;
 	}
-
-	/* SOW GLS MULTI PURPOSE BUTTON */
-  .gls-multi-wrapper .gls-multi-btn:hover {
-    background: #fec344;
-    border-color: #fec344;
-  }
 
 }
 

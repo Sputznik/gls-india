@@ -47,6 +47,10 @@ add_action('siteorigin_widgets_widget_folders', function( $folders ){
   return $folders;
 });
 
+function glsUniqueID( $data ){
+  return substr( md5( json_encode( $data ) ), 0, 8 );
+}
+
 /**
 * Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
 */

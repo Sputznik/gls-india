@@ -95,6 +95,16 @@ class GLS_MULTI_PURPOSE_BUTTON extends SiteOrigin_Widget{
 						'_else[is_modal]' 	=> array('show'),
 					),
         ),
+        'btn_text_color' => array(
+          'type' => 'color',
+          'label' => __( 'Button Text Colour', 'siteorigin-widgets' ),
+          'default' => '#ffffff'
+        ),
+        'btn_bg_color' => array(
+          'type' => 'color',
+          'label' => __( 'Button Background Colour', 'siteorigin-widgets' ),
+          'default' => '#febd30'
+        ),
       ),
       plugin_dir_path(__FILE__).'/widgets/gls-multi-button'
     );
