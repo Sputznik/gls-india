@@ -638,8 +638,15 @@ div.gls-multi-btn{ display: inline-block; cursor: pointer; }
   }
 
 	/* SOW GLS HERO */
-	.gls-hero .hero-img{ display: none; }
+	.gls-hero{ flex-direction: column-reverse; }
+	.gls-hero .hero-img{ width: 100%; }
 	.gls-hero .hero-content{ width: 100%; padding: 80px 15px; }
+	#gls-bs-slider.carousel {
+		width: 100%;
+		height: 450px;
+		margin: 0;
+	}
+	#gls-bs-slider .carousel-indicators{ bottom: -12%; }
 
 	/* SOW GLS LOGO SLIDER */
 	.gls-logos-wrapper{
