@@ -374,6 +374,7 @@
 	transform: scale(1.02);
 }
 .articles-users .gls-user-body .user-thumbnail-bg,
+.gls-users-grid .gls-user-body .user-thumbnail-bg,
 #gls-user-modal .gls-user-body .user-thumbnail-bg{
   width: 100%;
   max-width: 100%;
@@ -394,7 +395,6 @@
 #gls-user-modal .gls-user-body .user-meta {
   height: 120px;
   overflow: hidden;
-  margin-left: 16px;
   margin-top: 0;
 }
 .gls-user-body .user-meta .name{
@@ -407,7 +407,8 @@
 }
 #gls-user-modal .gls-user-body .user-meta .name{ color: #000000; }
 
-a[data-behaviour~="gls-user-popup"]{ text-decoration: none; display: block; height: 100%; }
+a[data-behaviour~="gls-user-popup"],
+a[data-behaviour~="gls-users"]{ text-decoration: none; display: block; height: 100%; cursor: pointer; }
 /* USER MODAL */
 #gls-user-modal .modal-dialog{ width: 700px; height: 500px; top: 18%; }
 #gls-user-modal .modal-content{ border-radius: 4px; }
@@ -477,6 +478,21 @@ div.gls-multi-btn{ display: inline-block; cursor: pointer; }
 	width: 100%;
 	height: 100%;
 }
+
+/* SOW GLS USERS GRID */
+.gls-users-grid{
+	display: grid;
+	grid-template-columns: repeat( 5, 1fr ); grid-gap: 10px;
+}
+.gls-users-grid .gls-user-body{ background-color: #ffffff; }
+.gls-users-grid .gls-user-body .user-meta .name{
+	color: #144a69;
+	text-align: center;
+	padding: 0 15px;
+	font-size: 16px;
+}
+
+#gls-user-modal.gls-users-modal .user-thumbnail-bg{ min-height: 280px; }
 
 
 
@@ -592,6 +608,9 @@ div.gls-multi-btn{ display: inline-block; cursor: pointer; }
   #gls-user-modal .modal-dialog{ width: 700px !important; height: 500px !important; top: 20% !important; }
   #gls-user-modal .modal-header{ margin:20px 44px 30px !important; }
 
+	/* SOW GLS USERS GRID */
+	#gls-user-modal.gls-users-modal .user-thumbnail-bg{ display: block !important; }
+
 }
 
 
@@ -669,6 +688,16 @@ div.gls-multi-btn{ display: inline-block; cursor: pointer; }
 	.navbar-nav>li>.dropdown-menu{ display: none; }
 	.header5 .navbar-nav .caret{ display: none; }
 
+	/* SOW GLS USERS GRID */
+	#gls-user-modal.gls-users-modal .user-thumbnail-bg{ display: none; }
+	.gls-users-grid{ grid-template-columns: repeat( 3, 1fr ); }
+
 }
 
-@media(max-width: 500px){ .articles-users{ grid-template-columns: repeat( 1, 1fr ); } }
+@media(max-width: 500px){
+	.articles-users{ grid-template-columns: repeat( 1, 1fr ); }
+	/* SOW GLS USERS GRID */
+	.gls-users-grid{
+		grid-template-columns: repeat( 1, 1fr );
+	}
+}

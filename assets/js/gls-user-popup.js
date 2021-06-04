@@ -3,10 +3,11 @@ jQuery.fn.gls_user_popup = function() {
 	return this.each(function() {
 
 		var $el           = jQuery(this),
-        $image         = $el.find('.user-thumbnail-bg'),
+        $image        = $el.find('.user-thumbnail-bg'),
 				imageUrl			=	$image.attr('style'),
         name          = $el.find('.name').text(),
         bio           = $el.find('.bio').html(),
+				modalType			=	$el.data('behaviour'),
 				bg_color			= $el.find('.gls-user-body').css('background-color');
 
     // CREATES DYNAMIC USER MODAL
@@ -16,7 +17,7 @@ jQuery.fn.gls_user_popup = function() {
     $el.createModal = function() {
 
       html = `
-      <div class="modal fade" id="gls-user-modal" tabindex="-1" role="dialog">
+      <div class="modal fade ${modalType}-modal" id="gls-user-modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -55,5 +56,6 @@ jQuery.fn.gls_user_popup = function() {
 jQuery(document).ready(function () {
 
 	jQuery('a[data-behaviour~=gls-user-popup]').gls_user_popup();
+	jQuery('a[data-behaviour~=gls-users]').gls_user_popup();
 
 });
