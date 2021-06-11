@@ -4,7 +4,7 @@
     foreach( $instance['gls_users'] as $item ): $image = wp_get_attachment_url( $item['user_image'] );
   ?>
     <div class="gls-user-card">
-      <a data-target="#gls-user-modal" data-behaviour="gls-user-popup">
+      <div data-target="#gls-user-modal" data-behaviour="gls-user-popup">
         <div class="gls-user-body">
           <div class="user-meta">
             <h5 class="name">
@@ -17,7 +17,7 @@
             <?php echo $item['user_bio'];?>
           </div>
         </div>
-      </a>
+      </div>
     </div>
   <?php endforeach;?>
 </div>

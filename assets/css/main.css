@@ -407,8 +407,8 @@
 }
 #gls-user-modal .gls-user-body .user-meta .name{ color: #000000; }
 
-a[data-behaviour~="gls-user-popup"],
-a[data-behaviour~="gls-users"]{ text-decoration: none; display: block; height: 100%; cursor: pointer; }
+div[data-behaviour~="gls-user-popup"],
+div[data-behaviour~="gls-users"]{ cursor: pointer; }
 /* USER MODAL */
 #gls-user-modal .modal-dialog{ width: 700px; height: 500px; top: 18%; }
 #gls-user-modal .modal-content{ border-radius: 4px; }
@@ -421,6 +421,8 @@ a[data-behaviour~="gls-users"]{ text-decoration: none; display: block; height: 1
 #gls-user-modal .gls-user-body .user-meta .name{ font-size: 24px; margin: 0; padding: 0; }
 #gls-user-modal .gls-user-body .user-meta .separator{ width: 40px; margin: 20px 0; height: 4px; background-color: #00AEEF; }
 #gls-user-modal .gls-user-body .user-meta .bio{ font-size: 16px; line-height: 18px; color: #3B495E; }
+#gls-user-modal .gls-user-body .user-meta .bio a{ color: #f5983d; text-decoration: none; }
+#gls-user-modal .gls-user-body .user-meta .bio a:focus{ outline: none; }
 /* USER MODAL */
 
 

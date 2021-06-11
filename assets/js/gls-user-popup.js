@@ -55,7 +55,7 @@ jQuery.fn.gls_user_popup = function() {
 
 jQuery(document).ready(function () {
 
-	jQuery('a[data-behaviour~=gls-user-popup]').gls_user_popup();
-	jQuery('a[data-behaviour~=gls-users]').gls_user_popup();
+	jQuery('div[data-behaviour~=gls-user-popup]').gls_user_popup();
+	jQuery('div[data-behaviour~=gls-users]').gls_user_popup();
 
 });
