@@ -408,7 +408,7 @@
 #gls-user-modal .gls-user-body .user-meta .name{ color: #000000; }
 
 div[data-behaviour~="gls-user-popup"],
-div[data-behaviour~="gls-users"]{ cursor: pointer; }
+div[data-behaviour~="gls-users"]{ cursor: pointer; height: 100%; }
 /* USER MODAL */
 #gls-user-modal .modal-dialog{ width: 700px; height: 500px; top: 18%; }
 #gls-user-modal .modal-content{ border-radius: 4px; }
