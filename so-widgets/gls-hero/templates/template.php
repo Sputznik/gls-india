@@ -39,7 +39,7 @@
         <div class="item <?php _e( $class );?>">
           <div class="item-body">
             <?php if( $image ):?>
-            <a href="<?php _e( $redirect_url );?>" class="redirect-url" <?php if( $item['new_window'] ){ echo "target=_blank"; } ?> >
+            <a href="<?php _e( $redirect_url );?>" class="redirect-url" <?php if( $item['new_window'] ){ echo 'target="_blank"'; } ?> >
               <img src="<?php _e( $image );?>" alt="carousel-image">
             </a>
            <?php endif;?>
