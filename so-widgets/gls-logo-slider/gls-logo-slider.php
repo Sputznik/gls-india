@@ -32,6 +32,11 @@ class GLS_LOGO_SLIDER extends SiteOrigin_Widget {
 					'label' 		=> __( 'Show number of slides', 'siteorigin-widgets' ),
 					'default' 		=> 6,
 				),
+				'new_window' => array(
+					'type' 		=> 'checkbox',
+					'label' 	=> __( 'Open in a new window', 'siteorigin-widgets' ),
+					'default' => false
+				),
 				'slides' => array(
 					'type' 	=> 'repeater',
 					'label' => __( 'Logo Section' , 'siteorigin-widgets' ),
@@ -50,7 +55,7 @@ class GLS_LOGO_SLIDER extends SiteOrigin_Widget {
 							'label'  => __( 'URL', 'siteorigin-widgets' ),
 						)
 					)
-				)
+				),
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/gls-logo-slider"
