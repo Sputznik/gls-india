@@ -696,3 +696,16 @@ div.gls-multi-btn{ display: inline-block; cursor: pointer; }
 		grid-template-columns: repeat( 1, 1fr );
 	}
 }
+
+@media( max-width: 425px ){
+
+	/* SOW GLS HERO */
+	#gls-bs-slider.carousel{
+		height: 300px;
+	}
+
+	#gls-bs-slider .carousel-indicators{
+		bottom: -15%;
+	}
+
+}
